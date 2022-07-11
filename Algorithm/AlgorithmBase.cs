@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Algorithm
 {
-    public class AlgorithmBase<T>
+    public class AlgorithmBase<T> where T: IComparable
     {
         public List<T> Items { get; set; } = new List<T>();
 
-        public void Swop(int positionA, int positionB)
+        protected void Swop(int positionA, int positionB)
         {
             if (positionA < Items.Count && positionB < Items.Count)
             {
@@ -18,6 +18,10 @@ namespace Algorithm
                 Items[positionA] = Items[positionB];
                 Items[positionB] = temp;
             }
+        }
+
+        public virtual void Sort() { 
+            Items.Sort();
         }
     }
 }
