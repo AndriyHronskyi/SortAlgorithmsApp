@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace SortAlgorithmsApp
 {
     public partial class Form1 : Form
     {
+        AlgorithmBase<int> algorithm = new BubleSort<int>();
         public Form1()
         {
             InitializeComponent();
