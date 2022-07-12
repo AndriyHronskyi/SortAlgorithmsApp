@@ -14,7 +14,7 @@ namespace Algorithm
 
             for (int j = 0; j < count; j++)
             {
-                for (int i = 0; i < count - 1; i++)
+                for (int i = 0; i < count - 1 - j; i++)
                 {
                     var a = Items[i];
                     var b = Items[i + 1];
@@ -24,7 +24,6 @@ namespace Algorithm
                         Swop(i, i + 1);
                     }
                 }
-                count--;
             }
             
         }
