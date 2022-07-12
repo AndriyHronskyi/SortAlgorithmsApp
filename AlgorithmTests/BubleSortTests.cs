@@ -20,7 +20,7 @@ namespace Algorithm.Tests
             var rnd = new Random();
             var items = new List<int>();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8000; i++)
             {
                 items.Add(rnd.Next(0,100));
             }
@@ -36,6 +36,7 @@ namespace Algorithm.Tests
             {
                 Assert.AreEqual(items[i], buble.Items[i]);
             }
+
         }
     }
 }
