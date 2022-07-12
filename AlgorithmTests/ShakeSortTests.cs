@@ -9,34 +9,33 @@ using System.Threading.Tasks;
 namespace Algorithm.Tests
 {
     [TestClass()]
-    public class BubleSortTests
+    public class ShakeSortTests
     {
         [TestMethod()]
         public void SortTest()
         {
             // arrange
-            var buble = new BubleSort<int>();
+            var shake = new ShakeSort<int>();
 
             var rnd = new Random();
             var items = new List<int>();
 
             for (int i = 0; i < 10000; i++)
             {
-                items.Add(rnd.Next(0,100));
+                items.Add(rnd.Next(0, 100));
             }
 
-            buble.Items.AddRange(items);
+            shake.Items.AddRange(items);
             var sorted = items.OrderBy(x => x).ToArray();
 
             // act
-            buble.Sort();
+            shake.Sort();
 
             // assert
             for (int i = 0; i < items.Count; i++)
             {
-                Assert.AreEqual(sorted[i], buble.Items[i]);
+                Assert.AreEqual(sorted[i], shake.Items[i]);
             }
-
         }
     }
 }
