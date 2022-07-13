@@ -10,7 +10,6 @@ namespace Algorithm
     {
         protected override void MakeSort()
         {
-            SwopCount = 0;
             var count = Items.Count;
 
             for (int j = 0; j < count; j++)
