@@ -35,13 +35,20 @@ namespace Algorithm
             }
         }*/
 
-        public virtual void Sort() {
+        public TimeSpan Sort() {
             var timer = new Stopwatch();
             SwopCount = 0;
 
             timer.Start();
-                Items.Sort();
+                MakeSort();
             timer.Stop();
+
+            return timer.Elapsed;
+        }
+
+        protected virtual void MakeSort()
+        {
+            Items.Sort();
         }
     }
 }

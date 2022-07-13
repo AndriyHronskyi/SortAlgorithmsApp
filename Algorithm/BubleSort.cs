@@ -8,7 +8,7 @@ namespace Algorithm
 {
     public class BubleSort<T> : AlgorithmBase<T> where T: IComparable
     {
-        public override void Sort()
+        protected override void MakeSort()
         {
             SwopCount = 0;
             var count = Items.Count;
