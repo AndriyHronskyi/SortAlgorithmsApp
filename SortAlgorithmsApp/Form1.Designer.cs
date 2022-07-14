@@ -37,11 +37,8 @@
             this.FillButton = new System.Windows.Forms.Button();
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.verticalProgressBar1 = new VerticalProgressBar.VerticalProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,36 +117,10 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.verticalProgressBar1);
             this.panel3.Location = new System.Drawing.Point(436, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(352, 158);
             this.panel3.TabIndex = 4;
-            // 
-            // verticalProgressBar1
-            // 
-            this.verticalProgressBar1.BorderStyle = VerticalProgressBar.BorderStyles.Classic;
-            this.verticalProgressBar1.Color = System.Drawing.Color.SeaGreen;
-            this.verticalProgressBar1.Location = new System.Drawing.Point(3, 7);
-            this.verticalProgressBar1.Margin = new System.Windows.Forms.Padding(0);
-            this.verticalProgressBar1.Maximum = 100;
-            this.verticalProgressBar1.Minimum = 0;
-            this.verticalProgressBar1.Name = "verticalProgressBar1";
-            this.verticalProgressBar1.Size = new System.Drawing.Size(10, 137);
-            this.verticalProgressBar1.Step = 1;
-            this.verticalProgressBar1.Style = VerticalProgressBar.Styles.Solid;
-            this.verticalProgressBar1.TabIndex = 5;
-            this.verticalProgressBar1.Value = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "21";
             // 
             // Form1
             // 
@@ -165,8 +136,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -182,8 +151,6 @@
         private System.Windows.Forms.Button FillButton;
         private System.Windows.Forms.TextBox FillTextBox;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private VerticalProgressBar.VerticalProgressBar verticalProgressBar1;
     }
 }
 

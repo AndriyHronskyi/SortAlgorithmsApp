@@ -13,7 +13,7 @@ namespace SortAlgorithmsApp
 {
     public partial class Form1 : Form
     {
-        List<int> items = new List<int> ();
+        List<SortedItem> items = new List<SortedItem> ();
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,10 @@ namespace SortAlgorithmsApp
         {
             if (int.TryParse(AddTextBox.Text, out int value))
             {
-                items.Add(value);
+                var item = new SortedItem(value);
+                items.Add(item);
+                panel3.Controls.Add(item.ProgressBar);
+                panel3.Controls.Add(item.Label);
             }
             AddTextBox.Text = "";
         }
@@ -36,7 +39,10 @@ namespace SortAlgorithmsApp
 
                 for (int i = 0; i < value; i++)
                 {
-                    items.Add(rnd.Next());
+                    var item = new SortedItem(rnd.Next());
+                    items.Add(item);
+                    panel3.Controls.Add(item.ProgressBar);
+                    panel3.Controls.Add(item.Label);
                 }
             }
             FillTextBox.Text = "";
