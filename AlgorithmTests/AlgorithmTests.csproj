@@ -56,10 +56,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="InsertSortTests.cs" />
-    <Compile Include="BubleSortTests.cs" />
+    <Compile Include="SortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShakeSortTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

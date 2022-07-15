@@ -29,7 +29,7 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void SubleTest()
+        public void BubleSortTest()
         {
             // arrange
             var buble = new BubleSort<int>();
@@ -43,7 +43,40 @@ namespace Algorithm.Tests
             {
                 Assert.AreEqual(Sorted[i], buble.Items[i]);
             }
+        }
 
+        [TestMethod()]
+        public void ShakeSortTest()
+        {
+            // arrange
+            var shake = new ShakeSort<int>();
+            shake.Items.AddRange(Items);
+
+            // act
+            shake.Sort();
+
+            // assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], shake.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void InsertSortTest()
+        {
+            // arrange
+            var insert = new InsertSort<int>();
+            insert.Items.AddRange(Items);
+
+            // act
+            insert.Sort();
+
+            // assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], insert.Items[i]);
+            }
         }
     }
 }
