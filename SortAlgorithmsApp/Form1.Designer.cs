@@ -37,6 +37,7 @@
             this.FillButton = new System.Windows.Forms.Button();
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bubleSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             this.panel1.Controls.Add(this.AddTextBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(401, 68);
+            this.panel1.Size = new System.Drawing.Size(245, 68);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -62,7 +63,7 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(310, 22);
+            this.AddButton.Location = new System.Drawing.Point(156, 22);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 1;
@@ -74,7 +75,7 @@
             // 
             this.AddTextBox.Location = new System.Drawing.Point(16, 25);
             this.AddTextBox.Name = "AddTextBox";
-            this.AddTextBox.Size = new System.Drawing.Size(284, 20);
+            this.AddTextBox.Size = new System.Drawing.Size(126, 20);
             this.AddTextBox.TabIndex = 0;
             // 
             // panel2
@@ -84,7 +85,7 @@
             this.panel2.Controls.Add(this.FillTextBox);
             this.panel2.Location = new System.Drawing.Point(12, 102);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(401, 68);
+            this.panel2.Size = new System.Drawing.Size(245, 68);
             this.panel2.TabIndex = 3;
             // 
             // label3
@@ -98,7 +99,7 @@
             // 
             // FillButton
             // 
-            this.FillButton.Location = new System.Drawing.Point(310, 22);
+            this.FillButton.Location = new System.Drawing.Point(156, 22);
             this.FillButton.Name = "FillButton";
             this.FillButton.Size = new System.Drawing.Size(75, 23);
             this.FillButton.TabIndex = 1;
@@ -110,23 +111,34 @@
             // 
             this.FillTextBox.Location = new System.Drawing.Point(16, 25);
             this.FillTextBox.Name = "FillTextBox";
-            this.FillTextBox.Size = new System.Drawing.Size(284, 20);
+            this.FillTextBox.Size = new System.Drawing.Size(126, 20);
             this.FillTextBox.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(436, 12);
+            this.panel3.Location = new System.Drawing.Point(263, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(352, 158);
+            this.panel3.Size = new System.Drawing.Size(525, 158);
             this.panel3.TabIndex = 4;
+            // 
+            // bubleSortBtn
+            // 
+            this.bubleSortBtn.Location = new System.Drawing.Point(13, 177);
+            this.bubleSortBtn.Name = "bubleSortBtn";
+            this.bubleSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.bubleSortBtn.TabIndex = 5;
+            this.bubleSortBtn.Text = "Buble Sort";
+            this.bubleSortBtn.UseVisualStyleBackColor = true;
+            this.bubleSortBtn.Click += new System.EventHandler(this.bubleSortBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bubleSortBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Button FillButton;
         private System.Windows.Forms.TextBox FillTextBox;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button bubleSortBtn;
     }
 }
 
