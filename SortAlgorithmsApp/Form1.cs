@@ -50,7 +50,8 @@ namespace SortAlgorithmsApp
 
         private void bubleSortBtn_Click(object sender, EventArgs e)
         {
-            var buble = new BubleSort<SortedItem>();
+            var buble = new BubleSort<SortedItem>(items);
+            buble.Sort();
         }
 
         private void Swop(SortedItem FirtsElem, SortedItem SecondElem)
