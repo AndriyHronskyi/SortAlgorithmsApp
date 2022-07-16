@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SortAlgorithmsApp
 {
-    class SortedItem
+    class SortedItem : IComparable
     {
         public VerticalProgressBar.VerticalProgressBar ProgressBar { get; private set; }
         public Label Label { get; private set; }    
@@ -47,6 +47,17 @@ namespace SortAlgorithmsApp
             Label.TabIndex = number;
             Label.Text = Value.ToString();
         }
-    
+
+        public int CompareTo(object obj)
+        {
+            if (obj is SortedItem item)
+            {
+                return Value.CompareTo(item.Value);
+            }
+            else
+            {
+                throw new ArgumentException($"obj is not {nameof(SortedItem)}", nameof(obj));
+            }
+        }
     }
 }
