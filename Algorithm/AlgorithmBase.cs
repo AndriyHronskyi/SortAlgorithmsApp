@@ -14,6 +14,13 @@ namespace Algorithm
 
         public List<T> Items { get; set; } = new List<T>();
 
+        public AlgorithmBase(IEnumerable<T> items)
+        {
+            Items.AddRange(items);
+        }
+
+        public AlgorithmBase() { }
+
         protected void Swop(int positionA, int positionB)
         {
             if (positionA < Items.Count && positionB < Items.Count)
