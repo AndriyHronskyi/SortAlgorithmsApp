@@ -52,5 +52,10 @@ namespace SortAlgorithmsApp
         {
 
         }
+
+        private void Swop(SortedItem FirtsElem, SortedItem SecondElem)
+        { 
+            //
+        }
     }
 }

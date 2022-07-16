@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,17 @@ namespace SortAlgorithmsApp
             Label.Size = new System.Drawing.Size(19, 13);
             Label.TabIndex = number;
             Label.Text = Value.ToString();
+        }
+
+        public void SetNewPosition(int value)
+        {
+            ProgressBar.Value = value;
+            Label.Text = value.ToString();
+        }
+
+        public void SetColor(Color color)
+        { 
+            ProgressBar.Color = color;
         }
 
         public int CompareTo(object obj)
