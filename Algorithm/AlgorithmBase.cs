@@ -11,8 +11,9 @@ namespace Algorithm
     {
         public int SwopCount { get; protected set; } = 0;
         public int ComparisonCount { get; protected set; } = 0;
-
         public List<T> Items { get; set; } = new List<T>();
+
+        public event EventHandler<Tuple<T, T>> CompareEvent;
 
         public AlgorithmBase(IEnumerable<T> items)
         {
