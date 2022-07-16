@@ -50,14 +50,21 @@ namespace SortAlgorithmsApp
 
         private void bubleSortBtn_Click(object sender, EventArgs e)
         {
-            var buble = new BubleSort<SortedItem>(items);
-            buble.Sort();
+            var bubble = new BubleSort<SortedItem>(items);
+            bubble.CompareEvent += Bubble_CompareEvent;
+            bubble.Sort();
         }
 
-        private void Swop(SortedItem FirtsElem, SortedItem SecondElem)
+        private void Bubble_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
-            FirtsElem.SetColor(Color.Red);
-            SecondElem.SetColor(Color.Green);
+            e.Item1.SetColor(Color.Red);
+            e.Item2.SetColor(Color.Green);
+        }
+
+        private void Swop(SortedItem a, SortedItem b)
+        {
+            a.SetColor(Color.Red);
+            b.SetColor(Color.Green);
 
 
         }
