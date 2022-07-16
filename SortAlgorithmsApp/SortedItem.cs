@@ -12,7 +12,7 @@ namespace SortAlgorithmsApp
     {
         public VerticalProgressBar.VerticalProgressBar ProgressBar { get; private set; }
         public Label Label { get; private set; }    
-        public int Value { get; set; }
+        public int Value { get; private set; }
 
         public SortedItem(int value, int number)
         { 
@@ -49,8 +49,9 @@ namespace SortAlgorithmsApp
             Label.Text = Value.ToString();
         }
 
-        public void SetNewPosition(int value)
+        public void SetValue(int value)
         {
+            Value = value;
             ProgressBar.Value = value;
             Label.Text = value.ToString();
         }
