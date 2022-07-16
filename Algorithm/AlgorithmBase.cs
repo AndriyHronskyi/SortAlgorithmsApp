@@ -58,5 +58,12 @@ namespace Algorithm
         {
             Items.Sort();
         }
+
+        protected int Compare(T a, T b)
+        {
+            CompareEvent?.Invoke(this, new Tuple<T, T>(a, b));
+            ComparisonCount++;
+            return a.CompareTo(b);
+        }
     }
 }
