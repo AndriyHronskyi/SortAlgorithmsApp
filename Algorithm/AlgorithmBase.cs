@@ -14,6 +14,7 @@ namespace Algorithm
         public List<T> Items { get; set; } = new List<T>();
 
         public event EventHandler<Tuple<T, T>> CompareEvent;
+        public event EventHandler<Tuple<T, T>> SwopEvent;
 
         public AlgorithmBase(IEnumerable<T> items)
         {
@@ -31,6 +32,8 @@ namespace Algorithm
                 Items[positionB] = temp;
 
                 SwopCount++;
+
+                SwopEvent.Invoke(this, new Tuple<T, T>(Items[positionA], Items[positionB]));
             }
         }
         /*
