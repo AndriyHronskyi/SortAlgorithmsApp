@@ -27,21 +27,11 @@ namespace SortAlgorithmsApp
                 var item = new SortedItem(value, items.Count);
                 items.Add(item);
 
-                DrawItems(items);
-            }
-            AddTextBox.Text = "";
-        }
-
-        private void DrawItems(List<SortedItem> items)
-        {
-            panel3.Controls.Clear(); 
-
-            foreach (var item in items)
-            {
                 
-                panel3.Controls.Add(item.ProgressBar);
-                panel3.Controls.Add(item.Label);
             }
+            RefreshItems();
+
+            AddTextBox.Text = "";
         }
 
         private void FillButton_Click(object sender, EventArgs e)
@@ -51,17 +41,42 @@ namespace SortAlgorithmsApp
                 var rnd = new Random();
                 for (int i = 0; i < value; i++)
                 {
-                    var item = new SortedItem(value, items.Count);
+                    var item = new SortedItem(rnd.Next(0,100), items.Count);
                     items.Add(item);
                 }
-
-                DrawItems(items);
             }
+
+            RefreshItems();
             FillTextBox.Text = "";
+        }
+
+        private void DrawItems(List<SortedItem> items)
+        {
+            panel3.Controls.Clear();
+
+            foreach (var item in items)
+            {
+
+                panel3.Controls.Add(item.ProgressBar);
+                panel3.Controls.Add(item.Label);
+            }
+            panel3.Refresh();
+        }
+
+        private void RefreshItems()
+        {
+            foreach (var item in items)
+            {
+                item.Refresh();
+            }
+
+            DrawItems(items);
         }
 
         private void bubleSortBtn_Click(object sender, EventArgs e)
         {
+            RefreshItems();
+
             var bubble = new BubleSort<SortedItem>(items);
             bubble.CompareEvent += Bubble_CompareEvent;
             bubble.SwopEvent += Bubble_SwopEvent;
