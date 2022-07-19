@@ -54,7 +54,12 @@ namespace SortAlgorithmsApp
             var bubble = new BubleSort<SortedItem>(items);
             bubble.CompareEvent += Bubble_CompareEvent;
             bubble.SwopEvent += Bubble_SwopEvent;
-            bubble.Sort();
+            var time = bubble.Sort();
+
+            DurationLbl.Text = "Duration: " + time.Seconds + " sec.";
+            SwopLbl.Text = "Number of swop: " + bubble.SwopCount;
+            CompareLbl.Text = "Number of compares: " + bubble.ComparisonCount;
+            panel4.Refresh();
         }
 
         private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)

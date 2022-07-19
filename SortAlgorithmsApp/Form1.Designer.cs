@@ -38,8 +38,14 @@
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bubleSortBtn = new System.Windows.Forms.Button();
+            this.DurationLbl = new System.Windows.Forms.Label();
+            this.CompareLbl = new System.Windows.Forms.Label();
+            this.SwopLbl = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,11 +139,59 @@
             this.bubleSortBtn.UseVisualStyleBackColor = true;
             this.bubleSortBtn.Click += new System.EventHandler(this.bubleSortBtn_Click);
             // 
+            // DurationLbl
+            // 
+            this.DurationLbl.AutoSize = true;
+            this.DurationLbl.Location = new System.Drawing.Point(3, 23);
+            this.DurationLbl.Name = "DurationLbl";
+            this.DurationLbl.Size = new System.Drawing.Size(50, 13);
+            this.DurationLbl.TabIndex = 6;
+            this.DurationLbl.Text = "Duration:";
+            // 
+            // CompareLbl
+            // 
+            this.CompareLbl.AutoSize = true;
+            this.CompareLbl.Location = new System.Drawing.Point(3, 61);
+            this.CompareLbl.Name = "CompareLbl";
+            this.CompareLbl.Size = new System.Drawing.Size(108, 13);
+            this.CompareLbl.TabIndex = 7;
+            this.CompareLbl.Text = "Number of compares:";
+            // 
+            // SwopLbl
+            // 
+            this.SwopLbl.AutoSize = true;
+            this.SwopLbl.Location = new System.Drawing.Point(3, 42);
+            this.SwopLbl.Name = "SwopLbl";
+            this.SwopLbl.Size = new System.Drawing.Size(87, 13);
+            this.SwopLbl.TabIndex = 8;
+            this.SwopLbl.Text = "Number of swop:";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.CompareLbl);
+            this.panel4.Controls.Add(this.SwopLbl);
+            this.panel4.Controls.Add(this.DurationLbl);
+            this.panel4.Location = new System.Drawing.Point(12, 207);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(169, 90);
+            this.panel4.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Results";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.bubleSortBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -148,6 +202,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -164,6 +220,11 @@
         private System.Windows.Forms.TextBox FillTextBox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button bubleSortBtn;
+        private System.Windows.Forms.Label DurationLbl;
+        private System.Windows.Forms.Label CompareLbl;
+        private System.Windows.Forms.Label SwopLbl;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label6;
     }
 }
 
