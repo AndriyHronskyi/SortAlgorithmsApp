@@ -33,18 +33,9 @@ namespace Algorithm
 
                 SwopCount++;
 
-                SwopEvent.Invoke(this, new Tuple<T, T>(Items[positionA], Items[positionB]));
+                SwopEvent?.Invoke(this, new Tuple<T, T>(Items[positionA], Items[positionB]));
             }
         }
-        /*
-        public void FillRandom(int count)
-        {
-            var rnd = new Random();
-            for (int i = 0; i < count; i++)
-            {
-                Items.Add(rnd.Next(0, 100));
-            }
-        }*/
 
         public TimeSpan Sort() {
             var timer = new Stopwatch();
