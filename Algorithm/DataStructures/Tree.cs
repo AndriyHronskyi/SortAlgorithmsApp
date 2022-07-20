@@ -11,6 +11,16 @@ namespace Algorithm.DataStructures
         public Node<T> Root { get; private set; }
         public int Count { get; private set; }
 
+        public Tree() { }
+
+        public Tree(IEnumerable<T> items)
+        {
+            foreach (var item in items)
+            {
+                Add(item);
+            }
+        }
+
         public void Add(T data)
         {
             if (Root == null)
