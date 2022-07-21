@@ -42,7 +42,7 @@ namespace Algorithm.DataStructures
             var currentIndex = Count - 1;
             var parentIndex = GetParentIndex(currentIndex);
 
-            while (currentIndex > 0 && items[parentIndex].CompareTo(items[currentIndex]) == -1)
+            while (currentIndex > 0 && items[parentIndex].CompareTo(items[currentIndex]) == 1)
             {
                 Swap(currentIndex, parentIndex);
 
@@ -71,12 +71,12 @@ namespace Algorithm.DataStructures
                 leftIndex = 2 * curentIndex + 1;
                 rightIndex = 2 * curentIndex + 2;
 
-                if (leftIndex < Count && items[leftIndex].CompareTo(items[maxIndex]) == 1)
+                if (leftIndex < Count && items[leftIndex].CompareTo(items[maxIndex]) == -1)
                 {
                     maxIndex = leftIndex;
                 }
 
-                if (rightIndex < Count && items[rightIndex].CompareTo(items[maxIndex]) == 1)
+                if (rightIndex < Count && items[rightIndex].CompareTo(items[maxIndex]) == -1)
                 {
                     maxIndex = rightIndex;
                 }
