@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Algorithm
 {
     public class ShakeSort<T> : AlgorithmBase<T> where T: IComparable
     {
+        public ShakeSort(IEnumerable<T> items) : base(items) { }
+
+        public ShakeSort() { }
+
         protected override void MakeSort()
         {
             int left = 0;

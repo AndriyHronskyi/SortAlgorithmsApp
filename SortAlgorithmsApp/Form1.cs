@@ -71,12 +71,6 @@ namespace SortAlgorithmsApp
             DrawItems(items);
         }
 
-        private void bubleSortBtn_Click(object sender, EventArgs e)
-        {
-            var bubble = new BubleSort<SortedItem>(items);
-            BtnClick(bubble);
-        }
-
         private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             var temp = e.Item1.Number;
@@ -95,13 +89,8 @@ namespace SortAlgorithmsApp
         {
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Blue);
-            
-            panel3.Refresh();
-        }
 
-        private void ShakeSortBtn_Click(object sender, EventArgs e)
-        {
-            
+            panel3.Refresh();
         }
 
         private void BtnClick(AlgorithmBase<SortedItem> algorithm)
@@ -117,5 +106,19 @@ namespace SortAlgorithmsApp
             CompareLbl.Text = "Number of compares: " + algorithm.ComparisonCount;
             panel4.Refresh();
         }
+
+        private void bubleSortBtn_Click(object sender, EventArgs e)
+        {
+            var bubble = new BubleSort<SortedItem>(items);
+            BtnClick(bubble);
+        }
+
+        private void ShakeSortBtn_Click(object sender, EventArgs e)
+        {
+            var shake = new ShakeSort<SortedItem>(items);
+            BtnClick(shake);
+        }
+
+        
     }
 }
