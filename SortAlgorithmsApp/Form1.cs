@@ -25,9 +25,7 @@ namespace SortAlgorithmsApp
             if (int.TryParse(AddTextBox.Text, out int value))
             {
                 var item = new SortedItem(value, items.Count);
-                items.Add(item);
-
-                
+                items.Add(item);  
             }
             RefreshItems();
 
@@ -75,20 +73,11 @@ namespace SortAlgorithmsApp
 
         private void bubleSortBtn_Click(object sender, EventArgs e)
         {
-            RefreshItems();
-
             var bubble = new BubleSort<SortedItem>(items);
-            bubble.CompareEvent += Bubble_CompareEvent;
-            bubble.SwopEvent += Bubble_SwopEvent;
-            var time = bubble.Sort();
-
-            DurationLbl.Text = "Duration: " + time.Seconds + " sec.";
-            SwopLbl.Text = "Number of swop: " + bubble.SwopCount;
-            CompareLbl.Text = "Number of compares: " + bubble.ComparisonCount;
-            panel4.Refresh();
+            BtnClick(bubble);
         }
 
-        private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             var temp = e.Item1.Number;
             e.Item1.SetPosition(e.Item2.Number);
@@ -102,12 +91,31 @@ namespace SortAlgorithmsApp
             panel3.Refresh();
         }
 
-        private void Bubble_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void Algorithm_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Blue);
             
             panel3.Refresh();
+        }
+
+        private void ShakeSortBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnClick(AlgorithmBase<SortedItem> algorithm)
+        {
+            RefreshItems();
+
+            algorithm.CompareEvent += Algorithm_CompareEvent;
+            algorithm.SwopEvent += Algorithm_SwopEvent;
+            var time = algorithm.Sort();
+
+            DurationLbl.Text = "Duration: " + time.Seconds + " sec.";
+            SwopLbl.Text = "Number of swop: " + algorithm.SwopCount;
+            CompareLbl.Text = "Number of compares: " + algorithm.ComparisonCount;
+            panel4.Refresh();
         }
     }
 }
