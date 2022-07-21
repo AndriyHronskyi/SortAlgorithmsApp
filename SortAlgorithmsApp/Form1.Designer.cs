@@ -43,8 +43,9 @@
             this.SwopLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.InsertSortBtn = new System.Windows.Forms.Button();
             this.ShakeSortBtn = new System.Windows.Forms.Button();
+            this.ShellSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -135,7 +136,7 @@
             // 
             this.bubleSortBtn.Location = new System.Drawing.Point(13, 177);
             this.bubleSortBtn.Name = "bubleSortBtn";
-            this.bubleSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.bubleSortBtn.Size = new System.Drawing.Size(65, 23);
             this.bubleSortBtn.TabIndex = 5;
             this.bubleSortBtn.Text = "Buble Sort";
             this.bubleSortBtn.UseVisualStyleBackColor = true;
@@ -188,18 +189,19 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Results";
             // 
-            // button1
+            // InsertSortBtn
             // 
-            this.button1.Location = new System.Drawing.Point(175, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.InsertSortBtn.Location = new System.Drawing.Point(164, 176);
+            this.InsertSortBtn.Name = "InsertSortBtn";
+            this.InsertSortBtn.Size = new System.Drawing.Size(68, 23);
+            this.InsertSortBtn.TabIndex = 10;
+            this.InsertSortBtn.Text = "Insert Sort";
+            this.InsertSortBtn.UseVisualStyleBackColor = true;
+            this.InsertSortBtn.Click += new System.EventHandler(this.InsertSortBtn_Click);
             // 
             // ShakeSortBtn
             // 
-            this.ShakeSortBtn.Location = new System.Drawing.Point(94, 177);
+            this.ShakeSortBtn.Location = new System.Drawing.Point(83, 177);
             this.ShakeSortBtn.Name = "ShakeSortBtn";
             this.ShakeSortBtn.Size = new System.Drawing.Size(75, 23);
             this.ShakeSortBtn.TabIndex = 11;
@@ -207,13 +209,24 @@
             this.ShakeSortBtn.UseVisualStyleBackColor = true;
             this.ShakeSortBtn.Click += new System.EventHandler(this.ShakeSortBtn_Click);
             // 
+            // ShellSortBtn
+            // 
+            this.ShellSortBtn.Location = new System.Drawing.Point(236, 177);
+            this.ShellSortBtn.Name = "ShellSortBtn";
+            this.ShellSortBtn.Size = new System.Drawing.Size(64, 23);
+            this.ShellSortBtn.TabIndex = 12;
+            this.ShellSortBtn.Text = "Shell Sort";
+            this.ShellSortBtn.UseVisualStyleBackColor = true;
+            this.ShellSortBtn.Click += new System.EventHandler(this.ShellSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ShellSortBtn);
             this.Controls.Add(this.ShakeSortBtn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.InsertSortBtn);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.bubleSortBtn);
             this.Controls.Add(this.panel3);
@@ -248,8 +261,9 @@
         private System.Windows.Forms.Label SwopLbl;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button InsertSortBtn;
         private System.Windows.Forms.Button ShakeSortBtn;
+        private System.Windows.Forms.Button ShellSortBtn;
     }
 }
 

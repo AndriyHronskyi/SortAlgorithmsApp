@@ -73,15 +73,12 @@ namespace SortAlgorithmsApp
 
         private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
+
+
             var temp = e.Item1.Number;
             e.Item1.SetPosition(e.Item2.Number);
             e.Item2.SetPosition(temp);
 
-            panel3.Refresh();
-
-            //Return default color after Swop
-            e.Item1.SetColor(Color.SeaGreen);
-            e.Item2.SetColor(Color.SeaGreen);
             panel3.Refresh();
         }
 
@@ -90,6 +87,11 @@ namespace SortAlgorithmsApp
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Blue);
 
+            panel3.Refresh();
+
+            //Return default color after Swop
+            e.Item1.SetColor(Color.SeaGreen);
+            e.Item2.SetColor(Color.SeaGreen);
             panel3.Refresh();
         }
 
@@ -119,6 +121,16 @@ namespace SortAlgorithmsApp
             BtnClick(shake);
         }
 
-        
+        private void InsertSortBtn_Click(object sender, EventArgs e)
+        {
+            var insert = new InsertSort<SortedItem>(items);
+            BtnClick(insert);
+        }
+
+        private void ShellSortBtn_Click(object sender, EventArgs e)
+        {
+            var shell = new ShellSort<SortedItem>(items);
+            BtnClick(shell);
+        }
     }
 }
