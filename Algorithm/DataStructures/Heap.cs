@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace Algorithm.DataStructures
 {
-    class Heap<T> where T: IComparable
+    class Heap<T> : AlgorithmBase<T> where T: IComparable
     {
-        private List<T> items = new List<T>();
-        public int Count => items.Count;
+        public int Count => Items.Count;
 
         public T Peek()
         {
             if (Count > 0)
             {
-                return items[0];
+                return Items[0];
             }
             else
             {
-                throw new ArgumentNullException(nameof(items), "Heap empty");
+                throw new ArgumentNullException(nameof(Items), "Heap empty");
             }
         }
 
@@ -27,7 +26,7 @@ namespace Algorithm.DataStructures
 
         public Heap(IEnumerable<T> items)
         {
-            this.items.AddRange(items);
+            Items.AddRange(items);
             for (int i = Count; i >= 0; i--)
             {
                 Sort(i);
@@ -37,12 +36,12 @@ namespace Algorithm.DataStructures
 
         public void Add(T item)
         {
-            items.Add(item);
+            Items.Add(item);
 
             var currentIndex = Count - 1;
             var parentIndex = GetParentIndex(currentIndex);
 
-            while (currentIndex > 0 && items[parentIndex].CompareTo(items[currentIndex]) == 1)
+            while (currentIndex > 0 && Compare(Items[parentIndex], Items[currentIndex]) == 1)
             {
                 Swap(currentIndex, parentIndex);
 
@@ -53,9 +52,9 @@ namespace Algorithm.DataStructures
 
         public T GetMax()
         {
-            var result = items[0];
-            items[0] = items[Count - 1];
-            items.RemoveAt(Count - 1);
+            var result = Items[0];
+            Items[0] = Items[Count - 1];
+            Items.RemoveAt(Count - 1);
             Sort(0);
             return result;
         }
@@ -71,12 +70,12 @@ namespace Algorithm.DataStructures
                 leftIndex = 2 * curentIndex + 1;
                 rightIndex = 2 * curentIndex + 2;
 
-                if (leftIndex < Count && items[leftIndex].CompareTo(items[maxIndex]) == -1)
+                if (leftIndex < Count && Compare(Items[leftIndex], Items[maxIndex]) == -1)
                 {
                     maxIndex = leftIndex;
                 }
 
-                if (rightIndex < Count && items[rightIndex].CompareTo(items[maxIndex]) == -1)
+                if (rightIndex < Count && Compare(Items[rightIndex], Items[maxIndex]) == -1)
                 {
                     maxIndex = rightIndex;
                 }
@@ -86,16 +85,9 @@ namespace Algorithm.DataStructures
                     break;
                 }
 
-                Swap(curentIndex, maxIndex);
+                Swop(curentIndex, maxIndex);
                 curentIndex = maxIndex;
             }
-        }
-
-        private void Swap(int currentIndex, int parentIndex)
-        {
-            var temp = items[currentIndex];
-            items[currentIndex] = items[parentIndex];
-            items[parentIndex] = temp;
         }
 
         private int GetParentIndex(int currentIndex)
