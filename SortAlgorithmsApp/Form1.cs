@@ -132,5 +132,11 @@ namespace SortAlgorithmsApp
             var shell = new ShellSort<SortedItem>(items);
             BtnClick(shell);
         }
+
+        private void SelectSortBtn_Click(object sender, EventArgs e)
+        {
+            var select = new SelectionSort<SortedItem>(items);
+            BtnClick(select);
+        }
     }
 }

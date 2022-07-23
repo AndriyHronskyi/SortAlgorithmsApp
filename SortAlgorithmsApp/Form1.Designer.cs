@@ -46,6 +46,7 @@
             this.InsertSortBtn = new System.Windows.Forms.Button();
             this.ShakeSortBtn = new System.Windows.Forms.Button();
             this.ShellSortBtn = new System.Windows.Forms.Button();
+            this.SelectSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -219,11 +220,22 @@
             this.ShellSortBtn.UseVisualStyleBackColor = true;
             this.ShellSortBtn.Click += new System.EventHandler(this.ShellSortBtn_Click);
             // 
+            // SelectSortBtn
+            // 
+            this.SelectSortBtn.Location = new System.Drawing.Point(307, 176);
+            this.SelectSortBtn.Name = "SelectSortBtn";
+            this.SelectSortBtn.Size = new System.Drawing.Size(66, 23);
+            this.SelectSortBtn.TabIndex = 13;
+            this.SelectSortBtn.Text = "Selection Sort";
+            this.SelectSortBtn.UseVisualStyleBackColor = true;
+            this.SelectSortBtn.Click += new System.EventHandler(this.SelectSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SelectSortBtn);
             this.Controls.Add(this.ShellSortBtn);
             this.Controls.Add(this.ShakeSortBtn);
             this.Controls.Add(this.InsertSortBtn);
@@ -264,6 +276,7 @@
         private System.Windows.Forms.Button InsertSortBtn;
         private System.Windows.Forms.Button ShakeSortBtn;
         private System.Windows.Forms.Button ShellSortBtn;
+        private System.Windows.Forms.Button SelectSortBtn;
     }
 }
 
