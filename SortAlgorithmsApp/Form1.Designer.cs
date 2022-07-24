@@ -47,6 +47,7 @@
             this.ShakeSortBtn = new System.Windows.Forms.Button();
             this.ShellSortBtn = new System.Windows.Forms.Button();
             this.SelectSortBtn = new System.Windows.Forms.Button();
+            this.HeapSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -57,9 +58,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.AddButton);
             this.panel1.Controls.Add(this.AddTextBox);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(5, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 68);
+            this.panel1.Size = new System.Drawing.Size(193, 54);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -73,9 +74,9 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(156, 22);
+            this.AddButton.Location = new System.Drawing.Point(123, 22);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.Size = new System.Drawing.Size(61, 23);
             this.AddButton.TabIndex = 1;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -83,9 +84,9 @@
             // 
             // AddTextBox
             // 
-            this.AddTextBox.Location = new System.Drawing.Point(16, 25);
+            this.AddTextBox.Location = new System.Drawing.Point(11, 25);
             this.AddTextBox.Name = "AddTextBox";
-            this.AddTextBox.Size = new System.Drawing.Size(126, 20);
+            this.AddTextBox.Size = new System.Drawing.Size(102, 20);
             this.AddTextBox.TabIndex = 0;
             // 
             // panel2
@@ -93,15 +94,15 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.FillButton);
             this.panel2.Controls.Add(this.FillTextBox);
-            this.panel2.Location = new System.Drawing.Point(12, 102);
+            this.panel2.Location = new System.Drawing.Point(3, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 68);
+            this.panel2.Size = new System.Drawing.Size(195, 54);
             this.panel2.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 7);
+            this.label3.Location = new System.Drawing.Point(11, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 13);
             this.label3.TabIndex = 2;
@@ -109,9 +110,9 @@
             // 
             // FillButton
             // 
-            this.FillButton.Location = new System.Drawing.Point(156, 22);
+            this.FillButton.Location = new System.Drawing.Point(124, 22);
             this.FillButton.Name = "FillButton";
-            this.FillButton.Size = new System.Drawing.Size(75, 23);
+            this.FillButton.Size = new System.Drawing.Size(61, 23);
             this.FillButton.TabIndex = 1;
             this.FillButton.Text = "Fill";
             this.FillButton.UseVisualStyleBackColor = true;
@@ -119,23 +120,23 @@
             // 
             // FillTextBox
             // 
-            this.FillTextBox.Location = new System.Drawing.Point(16, 25);
+            this.FillTextBox.Location = new System.Drawing.Point(11, 25);
             this.FillTextBox.Name = "FillTextBox";
-            this.FillTextBox.Size = new System.Drawing.Size(126, 20);
+            this.FillTextBox.Size = new System.Drawing.Size(104, 20);
             this.FillTextBox.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(263, 12);
+            this.panel3.Location = new System.Drawing.Point(204, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(525, 158);
+            this.panel3.Size = new System.Drawing.Size(591, 114);
             this.panel3.TabIndex = 4;
             // 
             // bubleSortBtn
             // 
-            this.bubleSortBtn.Location = new System.Drawing.Point(13, 177);
+            this.bubleSortBtn.Location = new System.Drawing.Point(5, 132);
             this.bubleSortBtn.Name = "bubleSortBtn";
             this.bubleSortBtn.Size = new System.Drawing.Size(65, 23);
             this.bubleSortBtn.TabIndex = 5;
@@ -176,7 +177,7 @@
             this.panel4.Controls.Add(this.CompareLbl);
             this.panel4.Controls.Add(this.SwopLbl);
             this.panel4.Controls.Add(this.DurationLbl);
-            this.panel4.Location = new System.Drawing.Point(12, 207);
+            this.panel4.Location = new System.Drawing.Point(5, 162);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(169, 90);
             this.panel4.TabIndex = 9;
@@ -192,7 +193,7 @@
             // 
             // InsertSortBtn
             // 
-            this.InsertSortBtn.Location = new System.Drawing.Point(164, 176);
+            this.InsertSortBtn.Location = new System.Drawing.Point(154, 132);
             this.InsertSortBtn.Name = "InsertSortBtn";
             this.InsertSortBtn.Size = new System.Drawing.Size(68, 23);
             this.InsertSortBtn.TabIndex = 10;
@@ -202,7 +203,7 @@
             // 
             // ShakeSortBtn
             // 
-            this.ShakeSortBtn.Location = new System.Drawing.Point(83, 177);
+            this.ShakeSortBtn.Location = new System.Drawing.Point(75, 132);
             this.ShakeSortBtn.Name = "ShakeSortBtn";
             this.ShakeSortBtn.Size = new System.Drawing.Size(75, 23);
             this.ShakeSortBtn.TabIndex = 11;
@@ -212,7 +213,7 @@
             // 
             // ShellSortBtn
             // 
-            this.ShellSortBtn.Location = new System.Drawing.Point(236, 177);
+            this.ShellSortBtn.Location = new System.Drawing.Point(226, 132);
             this.ShellSortBtn.Name = "ShellSortBtn";
             this.ShellSortBtn.Size = new System.Drawing.Size(64, 23);
             this.ShellSortBtn.TabIndex = 12;
@@ -222,19 +223,29 @@
             // 
             // SelectSortBtn
             // 
-            this.SelectSortBtn.Location = new System.Drawing.Point(307, 176);
+            this.SelectSortBtn.Location = new System.Drawing.Point(295, 132);
             this.SelectSortBtn.Name = "SelectSortBtn";
-            this.SelectSortBtn.Size = new System.Drawing.Size(66, 23);
+            this.SelectSortBtn.Size = new System.Drawing.Size(83, 23);
             this.SelectSortBtn.TabIndex = 13;
             this.SelectSortBtn.Text = "Selection Sort";
             this.SelectSortBtn.UseVisualStyleBackColor = true;
             this.SelectSortBtn.Click += new System.EventHandler(this.SelectSortBtn_Click);
+            // 
+            // HeapSortBtn
+            // 
+            this.HeapSortBtn.Location = new System.Drawing.Point(382, 132);
+            this.HeapSortBtn.Name = "HeapSortBtn";
+            this.HeapSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.HeapSortBtn.TabIndex = 14;
+            this.HeapSortBtn.Text = "Heap Sort";
+            this.HeapSortBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HeapSortBtn);
             this.Controls.Add(this.SelectSortBtn);
             this.Controls.Add(this.ShellSortBtn);
             this.Controls.Add(this.ShakeSortBtn);
@@ -277,6 +288,7 @@
         private System.Windows.Forms.Button ShakeSortBtn;
         private System.Windows.Forms.Button ShellSortBtn;
         private System.Windows.Forms.Button SelectSortBtn;
+        private System.Windows.Forms.Button HeapSortBtn;
     }
 }
 
