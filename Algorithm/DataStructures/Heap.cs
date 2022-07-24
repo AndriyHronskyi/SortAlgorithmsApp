@@ -15,10 +15,6 @@ namespace Algorithm.DataStructures
         public Heap(IEnumerable<T> items)
         {
             Items.AddRange(items);
-            for (int i = Count; i >= 0; i--)
-            {
-                Sort(i);
-            }
         }
 
         public void Add(T item)
@@ -90,12 +86,11 @@ namespace Algorithm.DataStructures
 
         protected override void MakeSort()
         {
-            //var result = new List<T>();
-            //while (Count > 0)
-            //{
-            //    result.Add(GetMax());
-            //}
-            //Items.AddRange(result);
+            for (int i = Count; i >= 0; i--)
+            {
+                Sort(i);
+            }
+
             for (int i = Count - 1; i >= 0; i--)
             {
                 Swop(0, i);

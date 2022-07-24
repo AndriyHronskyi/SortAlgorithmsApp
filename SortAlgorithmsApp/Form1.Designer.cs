@@ -131,12 +131,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Location = new System.Drawing.Point(204, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(591, 114);
+            this.panel3.Size = new System.Drawing.Size(591, 162);
             this.panel3.TabIndex = 4;
             // 
             // bubleSortBtn
             // 
-            this.bubleSortBtn.Location = new System.Drawing.Point(5, 132);
+            this.bubleSortBtn.Location = new System.Drawing.Point(204, 180);
             this.bubleSortBtn.Name = "bubleSortBtn";
             this.bubleSortBtn.Size = new System.Drawing.Size(65, 23);
             this.bubleSortBtn.TabIndex = 5;
@@ -147,7 +147,7 @@
             // DurationLbl
             // 
             this.DurationLbl.AutoSize = true;
-            this.DurationLbl.Location = new System.Drawing.Point(3, 23);
+            this.DurationLbl.Location = new System.Drawing.Point(12, 23);
             this.DurationLbl.Name = "DurationLbl";
             this.DurationLbl.Size = new System.Drawing.Size(50, 13);
             this.DurationLbl.TabIndex = 6;
@@ -156,7 +156,7 @@
             // CompareLbl
             // 
             this.CompareLbl.AutoSize = true;
-            this.CompareLbl.Location = new System.Drawing.Point(3, 61);
+            this.CompareLbl.Location = new System.Drawing.Point(12, 61);
             this.CompareLbl.Name = "CompareLbl";
             this.CompareLbl.Size = new System.Drawing.Size(108, 13);
             this.CompareLbl.TabIndex = 7;
@@ -165,7 +165,7 @@
             // SwopLbl
             // 
             this.SwopLbl.AutoSize = true;
-            this.SwopLbl.Location = new System.Drawing.Point(3, 42);
+            this.SwopLbl.Location = new System.Drawing.Point(12, 42);
             this.SwopLbl.Name = "SwopLbl";
             this.SwopLbl.Size = new System.Drawing.Size(87, 13);
             this.SwopLbl.TabIndex = 8;
@@ -177,15 +177,15 @@
             this.panel4.Controls.Add(this.CompareLbl);
             this.panel4.Controls.Add(this.SwopLbl);
             this.panel4.Controls.Add(this.DurationLbl);
-            this.panel4.Location = new System.Drawing.Point(5, 162);
+            this.panel4.Location = new System.Drawing.Point(5, 132);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(169, 90);
+            this.panel4.Size = new System.Drawing.Size(193, 90);
             this.panel4.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1, 4);
+            this.label6.Location = new System.Drawing.Point(12, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 9;
@@ -193,7 +193,7 @@
             // 
             // InsertSortBtn
             // 
-            this.InsertSortBtn.Location = new System.Drawing.Point(154, 132);
+            this.InsertSortBtn.Location = new System.Drawing.Point(356, 180);
             this.InsertSortBtn.Name = "InsertSortBtn";
             this.InsertSortBtn.Size = new System.Drawing.Size(68, 23);
             this.InsertSortBtn.TabIndex = 10;
@@ -203,7 +203,7 @@
             // 
             // ShakeSortBtn
             // 
-            this.ShakeSortBtn.Location = new System.Drawing.Point(75, 132);
+            this.ShakeSortBtn.Location = new System.Drawing.Point(275, 180);
             this.ShakeSortBtn.Name = "ShakeSortBtn";
             this.ShakeSortBtn.Size = new System.Drawing.Size(75, 23);
             this.ShakeSortBtn.TabIndex = 11;
@@ -213,7 +213,7 @@
             // 
             // ShellSortBtn
             // 
-            this.ShellSortBtn.Location = new System.Drawing.Point(226, 132);
+            this.ShellSortBtn.Location = new System.Drawing.Point(430, 180);
             this.ShellSortBtn.Name = "ShellSortBtn";
             this.ShellSortBtn.Size = new System.Drawing.Size(64, 23);
             this.ShellSortBtn.TabIndex = 12;
@@ -223,7 +223,7 @@
             // 
             // SelectSortBtn
             // 
-            this.SelectSortBtn.Location = new System.Drawing.Point(295, 132);
+            this.SelectSortBtn.Location = new System.Drawing.Point(500, 180);
             this.SelectSortBtn.Name = "SelectSortBtn";
             this.SelectSortBtn.Size = new System.Drawing.Size(83, 23);
             this.SelectSortBtn.TabIndex = 13;
@@ -233,7 +233,7 @@
             // 
             // HeapSortBtn
             // 
-            this.HeapSortBtn.Location = new System.Drawing.Point(382, 132);
+            this.HeapSortBtn.Location = new System.Drawing.Point(589, 180);
             this.HeapSortBtn.Name = "HeapSortBtn";
             this.HeapSortBtn.Size = new System.Drawing.Size(75, 23);
             this.HeapSortBtn.TabIndex = 14;
