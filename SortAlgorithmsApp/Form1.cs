@@ -1,4 +1,5 @@
 ﻿using Algorithm;
+using Algorithm.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -137,6 +138,12 @@ namespace SortAlgorithmsApp
         {
             var select = new SelectionSort<SortedItem>(items);
             BtnClick(select);
+        }
+
+        private void HeapSortBtn_Click(object sender, EventArgs e)
+        {
+            var heap = new Heap<SortedItem>(items);
+            BtnClick(heap);
         }
     }
 }

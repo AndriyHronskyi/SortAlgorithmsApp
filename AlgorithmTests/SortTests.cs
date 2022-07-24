@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithm.DataStructures;
 
 namespace Algorithm.Tests
 {
@@ -117,8 +118,7 @@ namespace Algorithm.Tests
         public void HeapSortTest()
         {
             // arrange
-            var heap = new HeapSort<int>();
-            heap.Items.AddRange(Items);
+            var heap = new Heap<int>(Items);
 
             // act
             heap.Sort();

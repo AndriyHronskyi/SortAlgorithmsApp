@@ -66,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 7);
+            this.label1.Location = new System.Drawing.Point(14, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 2;
@@ -239,6 +239,7 @@
             this.HeapSortBtn.TabIndex = 14;
             this.HeapSortBtn.Text = "Heap Sort";
             this.HeapSortBtn.UseVisualStyleBackColor = true;
+            this.HeapSortBtn.Click += new System.EventHandler(this.HeapSortBtn_Click);
             // 
             // Form1
             // 
