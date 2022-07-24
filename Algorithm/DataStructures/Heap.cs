@@ -43,7 +43,7 @@ namespace Algorithm.DataStructures
 
             while (currentIndex > 0 && Compare(Items[parentIndex], Items[currentIndex]) == 1)
             {
-                Swap(currentIndex, parentIndex);
+                Swop(currentIndex, parentIndex);
 
                 currentIndex = parentIndex;
                 parentIndex = GetParentIndex(currentIndex);
