@@ -158,6 +158,12 @@ namespace SortAlgorithmsApp
             BtnClick(select);
         }
 
+        private void TreeSortBtn_Click(object sender, EventArgs e)
+        {
+            var tree = new Tree<SortedItem>(items);
+            BtnClick(tree);
+        }
+
         private void HeapSortBtn_Click(object sender, EventArgs e)
         {
             var heap = new Heap<SortedItem>(items);
@@ -169,5 +175,7 @@ namespace SortAlgorithmsApp
             var gnome = new GnomeSort<SortedItem>(items);
             BtnClick(gnome);
         }
+
+        
     }
 }
