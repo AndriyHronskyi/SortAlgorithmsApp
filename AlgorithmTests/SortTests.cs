@@ -162,5 +162,22 @@ namespace Algorithm.Tests
                 Assert.AreEqual(Sorted[i], gnome.Items[i]);
             }
         }
+
+        [TestMethod()]
+        public void RedixSortTest()
+        {
+            // arrange
+            var redix = new RedixSort<int>();
+            redix.Items.AddRange(Items);
+
+            // act
+            redix.Sort();
+
+            // assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], redix.Items[i]);
+            }
+        }
     }
 }
