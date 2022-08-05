@@ -98,5 +98,10 @@ namespace SortAlgorithmsApp
         {
             return Value.ToString();
         }
+
+        public override int GetHashCode()
+        {
+            return Value;
+        }
     }
 }

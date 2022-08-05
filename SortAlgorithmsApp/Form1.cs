@@ -196,6 +196,10 @@ namespace SortAlgorithmsApp
             BtnClick(gnome);
         }
 
-        
+        private void LsdRedixSortBtn_Click(object sender, EventArgs e)
+        {
+            var LsdRedix = new LsdRedixSort<SortedItem>(items);
+            BtnClick(LsdRedix);
+        }
     }
 }
