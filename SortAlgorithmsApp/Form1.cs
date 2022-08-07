@@ -201,5 +201,11 @@ namespace SortAlgorithmsApp
             var LsdRedix = new LsdRedixSort<SortedItem>(items);
             BtnClick(LsdRedix);
         }
+
+        private void MsdRedixSortBtn_Click(object sender, EventArgs e)
+        {
+            var MsdRedix = new MsdRedixSort<SortedItem>(items);
+            BtnClick(MsdRedix);
+        }
     }
 }
